@@ -350,7 +350,7 @@ void MainWindow::setupGui() {
 	updateAudioToolTips();
 
 #ifdef USE_NO_TTS
-	qaAudioTTS->setChecked(false);
+    qaAudioTTS->setChecked(false);
 	qaAudioTTS->setDisabled(true);
 #else
 	qaAudioTTS->setChecked(Global::get().s.bTTS);
@@ -2129,6 +2129,7 @@ void MainWindow::on_qmConfig_aboutToShow() {
 	qmConfig->addAction(qaAudioWizard);
 	qmConfig->addAction(qaConfigCert);
 	qmConfig->addSeparator();
+    qaAudioTTS->setChecked(Global::get().s.bTTS);
 	qmConfig->addAction(qaAudioTTS);
 	qmConfig->addSeparator();
 	qmConfig->addAction(qaConfigMinimal);
